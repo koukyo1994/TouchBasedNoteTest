@@ -32,6 +32,12 @@ class CanvasView: UIImageView {
         drawLine(touch: touch)
     }
     
+    func clear() {
+        path.removeAllPoints()
+        layer.sublayers = nil
+        setNeedsDisplay()
+    }
+    
     private func drawLine(touch: UITouch) {
         let strokeLayer = CAShapeLayer()
         strokeLayer.fillColor = nil
