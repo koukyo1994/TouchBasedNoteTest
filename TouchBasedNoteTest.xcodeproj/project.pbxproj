@@ -13,6 +13,7 @@
 		EC5757C723BE50A200C83924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5757C523BE50A200C83924 /* Main.storyboard */; };
 		EC5757C923BE50A400C83924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5757C823BE50A400C83924 /* Assets.xcassets */; };
 		EC5757CC23BE50A400C83924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5757CA23BE50A400C83924 /* LaunchScreen.storyboard */; };
+		EC5757D423BE513600C83924 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5757D323BE513600C83924 /* CanvasView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EC5757C823BE50A400C83924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC5757CB23BE50A400C83924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC5757CD23BE50A400C83924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC5757D323BE513600C83924 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				EC5757BF23BE50A200C83924 /* AppDelegate.swift */,
 				EC5757C123BE50A200C83924 /* SceneDelegate.swift */,
 				EC5757C323BE50A200C83924 /* ViewController.swift */,
+				EC5757D323BE513600C83924 /* CanvasView.swift */,
 				EC5757C523BE50A200C83924 /* Main.storyboard */,
 				EC5757C823BE50A400C83924 /* Assets.xcassets */,
 				EC5757CA23BE50A400C83924 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				EC5757C423BE50A200C83924 /* ViewController.swift in Sources */,
 				EC5757C023BE50A200C83924 /* AppDelegate.swift in Sources */,
+				EC5757D423BE513600C83924 /* CanvasView.swift in Sources */,
 				EC5757C223BE50A200C83924 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

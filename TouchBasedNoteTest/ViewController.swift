@@ -9,12 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let canvasView = CanvasView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        canvasView.backgroundColor = .white
+        canvasView.frame = view.frame
+        canvasView.isUserInteractionEnabled = true
+        view.addSubview(canvasView)
     }
-
-
+    
 }
 
