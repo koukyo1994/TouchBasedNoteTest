@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TouchBasedNoteTest.xcodeproj">
+      location = "self:TouchBasedNoteApp.xcodeproj">
    </FileRef>
 </Workspace>

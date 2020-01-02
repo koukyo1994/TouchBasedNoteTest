@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC1B7B7623BB89D60054CD52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B7B7523BB89D60054CD52 /* AppDelegate.swift */; };
-		EC1B7B7823BB89D60054CD52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B7B7723BB89D60054CD52 /* SceneDelegate.swift */; };
-		EC1B7B7A23BB89D60054CD52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B7B7923BB89D60054CD52 /* ViewController.swift */; };
-		EC1B7B7D23BB89D60054CD52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1B7B7B23BB89D60054CD52 /* Main.storyboard */; };
-		EC1B7B7F23BB89DA0054CD52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1B7B7E23BB89DA0054CD52 /* Assets.xcassets */; };
-		EC1B7B8223BB89DA0054CD52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1B7B8023BB89DA0054CD52 /* LaunchScreen.storyboard */; };
+		EC1B7BAE23BE0AC60054CD52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B7BAD23BE0AC60054CD52 /* AppDelegate.swift */; };
+		EC1B7BB023BE0AC60054CD52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B7BAF23BE0AC60054CD52 /* SceneDelegate.swift */; };
+		EC1B7BB223BE0AC60054CD52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1B7BB123BE0AC60054CD52 /* ViewController.swift */; };
+		EC1B7BB523BE0AC60054CD52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1B7BB323BE0AC60054CD52 /* Main.storyboard */; };
+		EC1B7BB723BE0AC80054CD52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1B7BB623BE0AC80054CD52 /* Assets.xcassets */; };
+		EC1B7BBA23BE0AC80054CD52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1B7BB823BE0AC80054CD52 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EC1B7B7223BB89D60054CD52 /* TouchBasedNoteTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchBasedNoteTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC1B7B7523BB89D60054CD52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC1B7B7723BB89D60054CD52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EC1B7B7923BB89D60054CD52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EC1B7B7C23BB89D60054CD52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EC1B7B7E23BB89DA0054CD52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EC1B7B8123BB89DA0054CD52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EC1B7B8323BB89DA0054CD52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC1B7BAA23BE0AC60054CD52 /* TouchBasedNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchBasedNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC1B7BAD23BE0AC60054CD52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC1B7BAF23BE0AC60054CD52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EC1B7BB123BE0AC60054CD52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC1B7BB423BE0AC60054CD52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC1B7BB623BE0AC80054CD52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC1B7BB923BE0AC80054CD52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC1B7BBB23BE0AC80054CD52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EC1B7B6F23BB89D60054CD52 /* Frameworks */ = {
+		EC1B7BA723BE0AC60054CD52 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EC1B7B6923BB89D60054CD52 = {
+		EC1B7BA123BE0AC60054CD52 = {
 			isa = PBXGroup;
 			children = (
-				EC1B7B7423BB89D60054CD52 /* TouchBasedNoteTest */,
-				EC1B7B7323BB89D60054CD52 /* Products */,
+				EC1B7BAC23BE0AC60054CD52 /* TouchBasedNoteApp */,
+				EC1B7BAB23BE0AC60054CD52 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EC1B7B7323BB89D60054CD52 /* Products */ = {
+		EC1B7BAB23BE0AC60054CD52 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC1B7B7223BB89D60054CD52 /* TouchBasedNoteTest.app */,
+				EC1B7BAA23BE0AC60054CD52 /* TouchBasedNoteApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EC1B7B7423BB89D60054CD52 /* TouchBasedNoteTest */ = {
+		EC1B7BAC23BE0AC60054CD52 /* TouchBasedNoteApp */ = {
 			isa = PBXGroup;
 			children = (
-				EC1B7B7523BB89D60054CD52 /* AppDelegate.swift */,
-				EC1B7B7723BB89D60054CD52 /* SceneDelegate.swift */,
-				EC1B7B7923BB89D60054CD52 /* ViewController.swift */,
-				EC1B7B7B23BB89D60054CD52 /* Main.storyboard */,
-				EC1B7B7E23BB89DA0054CD52 /* Assets.xcassets */,
-				EC1B7B8023BB89DA0054CD52 /* LaunchScreen.storyboard */,
-				EC1B7B8323BB89DA0054CD52 /* Info.plist */,
+				EC1B7BAD23BE0AC60054CD52 /* AppDelegate.swift */,
+				EC1B7BAF23BE0AC60054CD52 /* SceneDelegate.swift */,
+				EC1B7BB123BE0AC60054CD52 /* ViewController.swift */,
+				EC1B7BB323BE0AC60054CD52 /* Main.storyboard */,
+				EC1B7BB623BE0AC80054CD52 /* Assets.xcassets */,
+				EC1B7BB823BE0AC80054CD52 /* LaunchScreen.storyboard */,
+				EC1B7BBB23BE0AC80054CD52 /* Info.plist */,
 			);
-			path = TouchBasedNoteTest;
+			path = TouchBasedNoteApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EC1B7B7123BB89D60054CD52 /* TouchBasedNoteTest */ = {
+		EC1B7BA923BE0AC60054CD52 /* TouchBasedNoteApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC1B7B8623BB89DA0054CD52 /* Build configuration list for PBXNativeTarget "TouchBasedNoteTest" */;
+			buildConfigurationList = EC1B7BBE23BE0AC80054CD52 /* Build configuration list for PBXNativeTarget "TouchBasedNoteApp" */;
 			buildPhases = (
-				EC1B7B6E23BB89D60054CD52 /* Sources */,
-				EC1B7B6F23BB89D60054CD52 /* Frameworks */,
-				EC1B7B7023BB89D60054CD52 /* Resources */,
+				EC1B7BA623BE0AC60054CD52 /* Sources */,
+				EC1B7BA723BE0AC60054CD52 /* Frameworks */,
+				EC1B7BA823BE0AC60054CD52 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TouchBasedNoteTest;
-			productName = TouchBasedNoteTest;
-			productReference = EC1B7B7223BB89D60054CD52 /* TouchBasedNoteTest.app */;
+			name = TouchBasedNoteApp;
+			productName = TouchBasedNoteApp;
+			productReference = EC1B7BAA23BE0AC60054CD52 /* TouchBasedNoteApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EC1B7B6A23BB89D60054CD52 /* Project object */ = {
+		EC1B7BA223BE0AC60054CD52 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "荒居秀尚";
 				TargetAttributes = {
-					EC1B7B7123BB89D60054CD52 = {
+					EC1B7BA923BE0AC60054CD52 = {
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
 			};
-			buildConfigurationList = EC1B7B6D23BB89D60054CD52 /* Build configuration list for PBXProject "TouchBasedNoteTest" */;
+			buildConfigurationList = EC1B7BA523BE0AC60054CD52 /* Build configuration list for PBXProject "TouchBasedNoteApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = EC1B7B6923BB89D60054CD52;
-			productRefGroup = EC1B7B7323BB89D60054CD52 /* Products */;
+			mainGroup = EC1B7BA123BE0AC60054CD52;
+			productRefGroup = EC1B7BAB23BE0AC60054CD52 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC1B7B7123BB89D60054CD52 /* TouchBasedNoteTest */,
+				EC1B7BA923BE0AC60054CD52 /* TouchBasedNoteApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EC1B7B7023BB89D60054CD52 /* Resources */ = {
+		EC1B7BA823BE0AC60054CD52 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC1B7B8223BB89DA0054CD52 /* LaunchScreen.storyboard in Resources */,
-				EC1B7B7F23BB89DA0054CD52 /* Assets.xcassets in Resources */,
-				EC1B7B7D23BB89D60054CD52 /* Main.storyboard in Resources */,
+				EC1B7BBA23BE0AC80054CD52 /* LaunchScreen.storyboard in Resources */,
+				EC1B7BB723BE0AC80054CD52 /* Assets.xcassets in Resources */,
+				EC1B7BB523BE0AC60054CD52 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EC1B7B6E23BB89D60054CD52 /* Sources */ = {
+		EC1B7BA623BE0AC60054CD52 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC1B7B7A23BB89D60054CD52 /* ViewController.swift in Sources */,
-				EC1B7B7623BB89D60054CD52 /* AppDelegate.swift in Sources */,
-				EC1B7B7823BB89D60054CD52 /* SceneDelegate.swift in Sources */,
+				EC1B7BB223BE0AC60054CD52 /* ViewController.swift in Sources */,
+				EC1B7BAE23BE0AC60054CD52 /* AppDelegate.swift in Sources */,
+				EC1B7BB023BE0AC60054CD52 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EC1B7B7B23BB89D60054CD52 /* Main.storyboard */ = {
+		EC1B7BB323BE0AC60054CD52 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EC1B7B7C23BB89D60054CD52 /* Base */,
+				EC1B7BB423BE0AC60054CD52 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		EC1B7B8023BB89DA0054CD52 /* LaunchScreen.storyboard */ = {
+		EC1B7BB823BE0AC80054CD52 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EC1B7B8123BB89DA0054CD52 /* Base */,
+				EC1B7BB923BE0AC80054CD52 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		EC1B7B8423BB89DA0054CD52 /* Debug */ = {
+		EC1B7BBC23BE0AC80054CD52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		EC1B7B8523BB89DA0054CD52 /* Release */ = {
+		EC1B7BBD23BE0AC80054CD52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,36 +280,36 @@
 			};
 			name = Release;
 		};
-		EC1B7B8723BB89DA0054CD52 /* Debug */ = {
+		EC1B7BBF23BE0AC80054CD52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PWSCZASUZP;
-				INFOPLIST_FILE = TouchBasedNoteTest/Info.plist;
+				INFOPLIST_FILE = TouchBasedNoteApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.hide1996.TouchBasedNoteTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.hide1996.TouchBasedNoteApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		EC1B7B8823BB89DA0054CD52 /* Release */ = {
+		EC1B7BC023BE0AC80054CD52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PWSCZASUZP;
-				INFOPLIST_FILE = TouchBasedNoteTest/Info.plist;
+				INFOPLIST_FILE = TouchBasedNoteApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.hide1996.TouchBasedNoteTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.hide1996.TouchBasedNoteApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,25 +319,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EC1B7B6D23BB89D60054CD52 /* Build configuration list for PBXProject "TouchBasedNoteTest" */ = {
+		EC1B7BA523BE0AC60054CD52 /* Build configuration list for PBXProject "TouchBasedNoteApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EC1B7B8423BB89DA0054CD52 /* Debug */,
-				EC1B7B8523BB89DA0054CD52 /* Release */,
+				EC1B7BBC23BE0AC80054CD52 /* Debug */,
+				EC1B7BBD23BE0AC80054CD52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC1B7B8623BB89DA0054CD52 /* Build configuration list for PBXNativeTarget "TouchBasedNoteTest" */ = {
+		EC1B7BBE23BE0AC80054CD52 /* Build configuration list for PBXNativeTarget "TouchBasedNoteApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EC1B7B8723BB89DA0054CD52 /* Debug */,
-				EC1B7B8823BB89DA0054CD52 /* Release */,
+				EC1B7BBF23BE0AC80054CD52 /* Debug */,
+				EC1B7BC023BE0AC80054CD52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EC1B7B6A23BB89D60054CD52 /* Project object */;
+	rootObject = EC1B7BA223BE0AC60054CD52 /* Project object */;
 }
