@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         canvasView.backgroundColor = .white
         canvasView.frame = view.frame
         canvasView.isUserInteractionEnabled = true
+        canvasView.clipsToBounds = true
         view.addSubview(canvasView)
     }
     
