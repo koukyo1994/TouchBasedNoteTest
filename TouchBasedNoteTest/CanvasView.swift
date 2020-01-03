@@ -13,59 +13,49 @@ class CanvasView: UIImageView {
     private let baseSize: CGFloat = 5.0
     private var color: UIColor = .black
     
-    public var path = UIBezierPath()
-    private var startPoint = CGPoint()
-    private var touchPoint = CGPoint()
-    
     private var touchDate = Date()
     private var touchEvents = [(interval: Double, point: CGPoint)]()
     
-    private let roiThreshold = 2.0
-    private let distanceThreshold = 40.0
+    private let roiThreshold = 0.5
+    private let distanceThreshold = 100.0
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
         let point = touch.location(in: self)
-        startPoint = point
+
+        let date = Date()
+        let interval = touchDate.distance(to: date)
         
-        // let date = Date()
-        // let interval = touchDate.distance(to: date)
-        
-        // touchDate = date
-        // touchEvents.append((interval: Double(interval), point: point))
+        touchDate = date
+        touchEvents.append((interval: Double(interval), point: point))
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
         let point = touch.location(in: self)
-        touchPoint = point
-        
-        // let date = Date()
-        // let interval = touchDate.distance(to: date)
-        
-        // touchDate = date
-        // touchEvents.append((interval: Double(interval), point: point))
-        
-        path.move(to: startPoint)
-        path.addLine(to: touchPoint)
-        startPoint = touchPoint
         drawLine(touch: touch)
+        
+        let date = Date()
+        let interval = touchDate.distance(to: date)
+        
+        touchDate = date
+        touchEvents.append((interval: Double(interval), point: point))
     }
     
-    //override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-    //    DispatchQueue.main.async {
-    //        self.displayRegionOfInterest(
-    //            rect: self.getBoundingBox(
-    //                pointSequence: self.collectRegionOfInterest()
-    //            )
-    //        )
-    //    }
-    //}
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        DispatchQueue.main.async {
+            self.displayRegionOfInterest(
+                rect: self.getBoundingBox(
+                    pointSequence: self.collectRegionOfInterest()
+                )
+            )
+        }
+    }
     
     func clear() {
-        path.removeAllPoints()
-        layer.sublayers = nil
+        image = nil
         setNeedsDisplay()
+        layoutIfNeeded()
     }
     
     private func collectRegionOfInterest() -> [CGPoint] {
@@ -109,6 +99,8 @@ class CanvasView: UIImageView {
         guard let context = UIGraphicsGetCurrentContext() else {
             return
         }
+        image?.draw(in: bounds)
+        
         // Yellow
         context.setFillColor(CGColor(srgbRed: 255, green: 217, blue: 0, alpha: 0.3))
         context.fill(rect)
@@ -122,12 +114,28 @@ class CanvasView: UIImageView {
     }
     
     private func drawLine(touch: UITouch) {
-        let strokeLayer = CAShapeLayer()
-        strokeLayer.fillColor = nil
-        strokeLayer.lineWidth = getLineWidth(touch: touch)
-        strokeLayer.strokeColor = color.cgColor
-        strokeLayer.path = path.cgPath
-        self.layer.addSublayer(strokeLayer)
+        UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0.0)
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
+        
+        image?.draw(in: bounds)
+        updateContext(context: context, touch: touch)
+        image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+    }
+    
+    private func updateContext(context: CGContext, touch: UITouch) {
+        let previousLocation = touch.previousLocation(in: self)
+        let location = touch.location(in: self)
+        let width = getLineWidth(touch: touch)
+        
+        context.setLineWidth(width)
+        context.setLineCap(.round)
+        context.setLineJoin(.round)
+        context.move(to: previousLocation)
+        context.addLine(to: location)
+        context.strokePath()
     }
     
     private func getLineWidth(touch: UITouch) -> CGFloat {
