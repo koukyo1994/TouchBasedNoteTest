@@ -101,22 +101,19 @@ class CanvasView: UIImageView {
     }
     
     private func displayRegionOfInterest(rect: CGRect) {
-        UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0.0)
-        guard let context = UIGraphicsGetCurrentContext() else {
-            return
-        }
-        image?.draw(in: bounds)
+        // Delete previous ROI
+        layer.sublayers = nil
+        setNeedsDisplay()
         
-        // Yellow
-        context.setFillColor(CGColor(srgbRed: 255, green: 217, blue: 0, alpha: 0.3))
-        context.fill(rect)
-        
-        guard let uiImage = UIGraphicsGetImageFromCurrentImageContext() else {
-            return
-        }
-        image = uiImage
+        let roiLayer = CAShapeLayer()
+        roiLayer.frame = rect
 
-        UIGraphicsEndImageContext()
+        // Yellow
+        roiLayer.fillColor = CGColor(srgbRed: 255, green: 217, blue: 0, alpha: 0.3)
+        roiLayer.strokeColor = CGColor(srgbRed: 255, green: 217, blue: 0, alpha: 0.3)
+        roiLayer.path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: rect.size.width, height: rect.size.height)).cgPath
+
+        layer.addSublayer(roiLayer)
     }
     
     private func drawLine(touch: UITouch) {
