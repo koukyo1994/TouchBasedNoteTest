@@ -14,10 +14,11 @@ class CanvasView: UIImageView {
     private var color: UIColor = .black
     
     private var touchDate = Date()
-    private var touchEvents = [(interval: Double, point: CGPoint)]()
+    private var lastLoction = CGPoint()
+    private var touchEvents = [(interval: Double, distance: Double, point: CGPoint)]()
     
     private let roiThreshold = 0.5
-    private let distanceThreshold = 100.0
+    private let distanceThreshold = 20.0
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
@@ -26,8 +27,11 @@ class CanvasView: UIImageView {
         let date = Date()
         let interval = touchDate.distance(to: date)
         
+        let distanceFromLastLocation = distance(point, lastLoction)
+        
         touchDate = date
-        touchEvents.append((interval: Double(interval), point: point))
+        lastLoction = point
+        touchEvents.append((interval: Double(interval), distance: distanceFromLastLocation, point: point))
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -38,17 +42,18 @@ class CanvasView: UIImageView {
         let date = Date()
         let interval = touchDate.distance(to: date)
         
+        let distanceFromLastLocation = distance(point, lastLoction)
+        
         touchDate = date
-        touchEvents.append((interval: Double(interval), point: point))
+        lastLoction = point
+        touchEvents.append((interval: Double(interval), distance: distanceFromLastLocation, point: point))
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         DispatchQueue.main.async {
-            self.displayRegionOfInterest(
-                rect: self.getBoundingBox(
-                    pointSequence: self.collectRegionOfInterest()
-                )
-            )
+            let rect = self.getBoundingBox(
+                pointSequence: self.collectRegionOfInterest())
+            self.displayRegionOfInterest(rect: rect)
         }
     }
     
@@ -60,15 +65,16 @@ class CanvasView: UIImageView {
     
     private func collectRegionOfInterest() -> [CGPoint] {
         var regionOfInterest = [CGPoint]()
-        var previousPoint = touchEvents.reversed()[0].point
-        for (interval, point) in touchEvents.reversed() {
-            if interval > roiThreshold || distance(point, previousPoint) > distanceThreshold {
+        for (interval, dist, point) in touchEvents.reversed() {
+            if interval > roiThreshold {
                 regionOfInterest.append(point)
-                break
+                if dist > distanceThreshold {
+                    break
+                }
             }
             regionOfInterest.append(point)
-            previousPoint = point
         }
+        print(regionOfInterest)
         return regionOfInterest
     }
     
