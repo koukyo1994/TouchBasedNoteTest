@@ -22,43 +22,49 @@ class CanvasView: UIImageView {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
-        let point = touch.location(in: self)
+        if touch.type == UITouch.TouchType.stylus {
+            let point = touch.location(in: self)
 
-        let date = Date()
-        let interval = touchDate.distance(to: date)
-        
-        let distanceFromLastLocation = distance(point, lastLoction)
-        
-        touchDate = date
-        lastLoction = point
-        touchEvents.append((interval: Double(interval), distance: distanceFromLastLocation, point: point))
+            let date = Date()
+            let interval = touchDate.distance(to: date)
+            
+            let distanceFromLastLocation = distance(point, lastLoction)
+            
+            touchDate = date
+            lastLoction = point
+            touchEvents.append((interval: Double(interval), distance: distanceFromLastLocation, point: point))
+        }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
-        let point = touch.location(in: self)
-        drawLine(touch: touch)
-        
-        let date = Date()
-        let interval = touchDate.distance(to: date)
-        
-        let distanceFromLastLocation = distance(point, lastLoction)
-        
-        touchDate = date
-        lastLoction = point
-        touchEvents.append((interval: Double(interval), distance: distanceFromLastLocation, point: point))
+        if touch.type == UITouch.TouchType.stylus {
+            let point = touch.location(in: self)
+            drawLine(touch: touch)
+            
+            let date = Date()
+            let interval = touchDate.distance(to: date)
+            
+            let distanceFromLastLocation = distance(point, lastLoction)
+            
+            touchDate = date
+            lastLoction = point
+            touchEvents.append((interval: Double(interval), distance: distanceFromLastLocation, point: point))
+        }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         DispatchQueue.main.async {
-            let rect = self.getBoundingBox(
-                pointSequence: self.collectRegionOfInterest())
-            self.displayRegionOfInterest(rect: rect)
+            if let rect = self.getBoundingBox(
+                pointSequence: self.collectRegionOfInterest()) {
+                self.displayRegionOfInterest(rect: rect)
+            }
         }
     }
     
     func clear() {
         image = nil
+        layer.sublayers = nil
         setNeedsDisplay()
         layoutIfNeeded()
     }
@@ -74,11 +80,14 @@ class CanvasView: UIImageView {
             }
             regionOfInterest.append(point)
         }
-        print(regionOfInterest)
         return regionOfInterest
     }
     
-    private func getBoundingBox(pointSequence: [CGPoint]) -> CGRect {
+    private func getBoundingBox(pointSequence: [CGPoint]) -> CGRect? {
+        if pointSequence.count == 0 {
+            return nil
+        }
+        
         var xSequence = [CGFloat]()
         var ySequence = [CGFloat]()
         _ = pointSequence.map {point in
@@ -144,7 +153,7 @@ class CanvasView: UIImageView {
     private func getLineWidth(touch: UITouch) -> CGFloat {
         var width = baseSize
         if touch.force > 0 {
-            width = width * touch.force
+            width = width * (touch.force * 0.8 + 0.05)
         }
         
         return width

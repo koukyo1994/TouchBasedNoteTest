@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     func setNavigationBar() {
         let screenSize: CGRect = UIScreen.main.bounds
-        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height * 0.2))
+        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height * 0.02))
         let navItem = UINavigationItem(title: "Navigation Area")
         let barButton = UIBarButtonItem(title: "clear", style: .plain, target: self, action: #selector(self.clear))
         navItem.rightBarButtonItem = barButton
