@@ -12,6 +12,7 @@ import Foundation
 class CanvasView: UIImageView {
     private let baseSize: CGFloat = 5.0
     private var color: UIColor = .black
+    private var isWriting = false
     
     private var ruledLineHeight: CGFloat = 30.0
     
@@ -25,6 +26,7 @@ class CanvasView: UIImageView {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
         if touch.type == UITouch.TouchType.stylus {
+            isWriting = true
             let point = touch.location(in: self)
 
             let date = Date()
@@ -56,12 +58,18 @@ class CanvasView: UIImageView {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        DispatchQueue.main.async {
-            if let rect = self.getBoundingBox(
-                pointSequence: self.collectRegionOfInterest()) {
-                self.displayRegionOfInterest(rect: rect)
+        isWriting = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+            if !self.isWriting {
+                if let rect = self.getBoundingBox(
+                    pointSequence: self.collectRegionOfInterest()) {
+                    self.displayRegionOfInterest(rect: rect)
+                    if let croppedImage = self.image?.cropRect(rect: rect) {
+                        UIImageWriteToSavedPhotosAlbum(croppedImage, nil, nil, nil)
+                    }
+                }
             }
-        }
+        })
     }
     
     func clear() {
