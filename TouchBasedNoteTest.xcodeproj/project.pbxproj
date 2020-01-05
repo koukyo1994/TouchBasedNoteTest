@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC33EF9423C23BA700076AAA /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC33EF9323C23BA700076AAA /* UIImageView+Extension.swift */; };
 		EC5757C023BE50A200C83924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5757BF23BE50A200C83924 /* AppDelegate.swift */; };
 		EC5757C223BE50A200C83924 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5757C123BE50A200C83924 /* SceneDelegate.swift */; };
 		EC5757C423BE50A200C83924 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5757C323BE50A200C83924 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC33EF9323C23BA700076AAA /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		EC5757BC23BE50A200C83924 /* TouchBasedNoteTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchBasedNoteTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5757BF23BE50A200C83924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC5757C123BE50A200C83924 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				EC5757BF23BE50A200C83924 /* AppDelegate.swift */,
 				EC5757C123BE50A200C83924 /* SceneDelegate.swift */,
 				EC5757C323BE50A200C83924 /* ViewController.swift */,
+				EC33EF9323C23BA700076AAA /* UIImageView+Extension.swift */,
 				EC5757D323BE513600C83924 /* CanvasView.swift */,
 				EC5DF21523BFBA9400C2D03A /* Utilities.swift */,
 				EC5757C523BE50A200C83924 /* Main.storyboard */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC33EF9423C23BA700076AAA /* UIImageView+Extension.swift in Sources */,
 				EC5757C423BE50A200C83924 /* ViewController.swift in Sources */,
 				EC5757C023BE50A200C83924 /* AppDelegate.swift in Sources */,
 				EC5757D423BE513600C83924 /* CanvasView.swift in Sources */,

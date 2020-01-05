@@ -13,6 +13,8 @@ class CanvasView: UIImageView {
     private let baseSize: CGFloat = 5.0
     private var color: UIColor = .black
     
+    private var ruledLineHeight: CGFloat = 30.0
+    
     private var touchDate = Date()
     private var lastLoction = CGPoint()
     private var touchEvents = [(interval: Double, distance: Double, point: CGPoint)]()
@@ -153,7 +155,7 @@ class CanvasView: UIImageView {
     private func getLineWidth(touch: UITouch) -> CGFloat {
         var width = baseSize
         if touch.force > 0 {
-            width = width * (touch.force * 0.8 + 0.05)
+            width = max(width * (touch.force * 0.6 + 0.2), width)
         }
         
         return width
