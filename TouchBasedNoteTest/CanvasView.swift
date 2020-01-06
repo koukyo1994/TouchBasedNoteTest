@@ -58,8 +58,8 @@ class CanvasView: UIImageView {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        isWriting = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+            self.isWriting = false
             if !self.isWriting {
                 if let rect = self.getBoundingBox(
                     pointSequence: self.collectRegionOfInterest()) {
